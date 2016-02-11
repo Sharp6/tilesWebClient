@@ -7,5 +7,12 @@
   <body>
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
+    <p>
+    	Please choose your game.
+    	<select data-bind="options: grids, optionsText: 'gridId', value: selectedGrid, optionsCaption: 'Choose a game...'">
+    	</select>
+    </p>
+
+    <script src="/libraries/require.min.js" data-main="/javascripts/menu.main.client.js"></script>
   </body>
 </html>
