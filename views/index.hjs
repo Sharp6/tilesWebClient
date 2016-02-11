@@ -12,6 +12,13 @@
     	<select data-bind="options: grids, optionsText: 'gridId', value: selectedGrid, optionsCaption: 'Choose a game...'">
     	</select>
     </p>
+    <div data-bind="with:selectedGrid">
+      <div class="grid-container" data-bind="foreach:tiles">
+        <div class="cell" data-bind="css:cssPositionClasses, click:$parent.doMove">
+          <span data-bind="text:label"></span>
+        </div>
+      </div>
+    </div>
 
     <script src="/libraries/require.min.js" data-main="/javascripts/menu.main.client.js"></script>
   </body>
